@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
-import { LoginFieldComponent } from './login-field/login-field.component';
+import { LoginSessionComponent } from './login-session/login-session.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     LoginComponent,
-    LoginFieldComponent
+    LoginSessionComponent
   ],
   imports: [
     CommonModule,
