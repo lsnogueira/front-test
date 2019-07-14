@@ -1,0 +1,27 @@
+@import '../utils/fonts';
+@import '../utils/colors';
+
+.register {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  height: 75vh;
+  transform: translate(-50%, 15%);
+
+  span {
+    display: inline-block;
+  }
+
+  .title {
+    text-align: left;
+    font-family: $open-sans;
+    font-size: 29px;
+    font-style: bold;
+    color: $text-black;
+  }
+
+  .personal-info {
+
+  }
+}
