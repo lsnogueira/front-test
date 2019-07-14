@@ -1,45 +1,54 @@
 <div class="container-fluid">
   <div class="row justify-content-center">
-    <div class="col-auto login-content"><!--@slideState-->
+    <div class="col-auto login-content">
+      <!--@slideState-->
       <span class="title mb-3">
         Entrar
       </span>
+      <!-- /.title mb-3 -->
       <div>
         <form>
           <div class="form-group">
-            <input
-              type="email"
-              class="form-control"
-              placeholder="E-mail"
-            />
+            <input type="email" class="form-control" placeholder="E-mail" />
           </div>
+          <!-- /.form-group -->
           <div class="form-group">
             <div class="password">
-              <input
-                type="password"
-                class="form-control"
-                placeholder="Senha"
-              />
+              <input type="password" class="form-control" placeholder="Senha" />
               <mat-icon>remove_red_eye</mat-icon>
             </div>
-          <div class="text-right">
-            <span class="forget-password">
-              Esqueceu a senha?
-            </span>
+            <!-- /.password -->
+            <div class="text-right">
+              <span class="forget-password">
+                Esqueceu a senha?
+              </span>
+              <!-- /.forget-password -->
+            </div>
+            <!-- /.text-right -->
           </div>
-          </div>
+          <!-- /.form-group -->
           <div class="btn-area">
-            <button class="btn-login" type="submit" mat-raised-button color="primary">
+            <button
+              class="btn-login"
+              type="submit"
+              mat-raised-button
+              color="primary"
+            >
               Entrar
             </button>
           </div>
+          <!-- /.btn-area -->
           <div class="text-center mt-4">
             <a [routerLink]="['/cadastro']" class="register">
               Não tem uma conta? Cadastre-se
             </a>
           </div>
+          <!-- /.text-center mt-4 -->
         </form>
       </div>
     </div>
+    <!-- /.col-auto login-content -->
   </div>
+  <!-- /.row justify-content-center -->
 </div>
+<!-- /.container-fluid -->

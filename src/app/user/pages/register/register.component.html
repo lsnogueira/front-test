@@ -7,118 +7,77 @@
       <!-- /.title mb-3 -->
       <div>
         <form>
-          <div class="form-row">
-            <div class="personal-info col-12 col-md-3 col-lg-6">
+          <div class="form-container mb-4">
+            <div class="form-left">
               <p>Informações Pessoais</p>
-              <div class="col-12">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Nome/Razão Social"
+              />
+              <div class="half-fields">
+                <input class="form-control" type="text" placeholder="CPF" />
+                <input class="form-control" type="tel" placeholder="Telefone" />
+              </div>
+              <input class="form-control" type="email" placeholder="E-mail" />
+              <div class="password">
                 <input
-                  type="text"
+                  type="password"
                   class="form-control"
-                  placeholder="Nome/Razão Social"
+                  placeholder="Senha"
                 />
-                <div class="valid-feedback">
-                  Preenchido corretamente!
-                </div>
-                <!-- /.valid-feedback -->
+                <mat-icon>remove_red_eye</mat-icon>
               </div>
-              <!-- /.col-12 - Nome/Razão Social -->
-              <div class="row">
-                <div class="col-6">
-                  <input type="text" class="form-control" placeholder="CPF" />
-                  <div class="valid-feedback">
-                    Preenchido corretamente!
-                  </div>
-                  <!-- /.valid-feedback -->
-                </div>
-                <!-- /.col-6 - CPF -->
-                <div class="col-6">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Telefone"
-                  />
-                  <div class="valid-feedback">
-                    Preenchido corretamente!
-                  </div>
-                  <!-- /.valid-feedback -->
-                </div>
-                <!-- /.col-6 - Telefone -->
-              </div>
-              <!-- /.row -->
-              <div class="col-12">
-                <input type="text" class="form-control" placeholder="E-mail" />
-                <div class="valid-feedback">
-                  Preenchido corretamente!
-                </div>
-                <!-- /.valid-feedback -->
-              </div>
-              <!-- /.col-12 - E-mail -->
-              <div class="col-12">
-                <input type="text" class="form-control" placeholder="Senha" />
-                <div class="valid-feedback">
-                  Preenchido corretamente!
-                </div>
-                <!-- /.valid-feedback -->
-              </div>
-              <!-- /.col-12 - Senha -->
+              <!-- /.password -->
             </div>
-            <!-- /.personal-info col-12 col-md-3 col-lg-6 -->
-            <div class="address-info col-12 col-md-3 col-lg-6">
+            <!-- /.form-left -->
+            <div class="form-right">
               <p>Endereço</p>
-              <div class="row">
-                <div class="col-3">
-                  <input type="text" class="form-control" placeholder="CEP" />
-                  <div class="valid-feedback">
-                    Preenchido corretamente!
-                  </div>
-                  <!-- /.valid-feedback -->
-                </div>
-                <!-- /.col-3 - CEP -->
-                <div class="col-9">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Logradouro"
-                  />
-                  <div class="valid-feedback">
-                    Preenchido corretamente!
-                  </div>
-                  <!-- /.valid-feedback -->
-                </div>
-                <!-- /.col-9 - Logradouro -->
+              <div class="address-fields">
+                <input
+                  class="form-control first-input"
+                  type="text"
+                  placeholder="CEP"
+                />
+                <input
+                  class="form-control second-input"
+                  type="text"
+                  placeholder="Logradouro"
+                />
               </div>
-              <!-- /.row -->
-              <div class="row">
-                <div class="col-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Número"
-                  />
-                  <div class="valid-feedback">
-                    Preenchido corretamente!
-                  </div>
-                  <!-- /.valid-feedback -->
-                </div>
-                <!-- /.col-3 - Número -->
-                <div class="col-8">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Bairro"
-                  />
-                  <div class="valid-feedback">
-                    Preenchido corretamente!
-                  </div>
-                  <!-- /.valid-feedback -->
-                </div>
-                <!-- /.col-9 - Bairro -->
+              <div class="address-fields">
+                <input
+                  class="form-control first-input"
+                  type="text"
+                  placeholder="Número"
+                />
+                <input
+                  class="form-control second-input"
+                  type="text"
+                  placeholder="Bairro"
+                />
               </div>
-              <!-- /.row -->
             </div>
-            <!-- /.address-info col-12 col-md-3 col-lg-6 -->
+            <!-- /.form-right -->
           </div>
-          <!-- /.form-row -->
+          <!-- /.form-container mb-4-->
+          <div class="btn-area">
+            <button
+              class="btn-register"
+              type="submit"
+              mat-raised-button
+              color="primary"
+            >
+              Cadastrar
+            </button>
+            <div class="text-center mt-4">
+              <a [routerLink]="['/login']" class="login">
+                Já tem uma conta? Faça login
+              </a>
+            </div>
+            <!-- /.text-center mt-4 -->
+          </div>
+          <!-- /.btn-area -->
         </form>
       </div>
     </div>

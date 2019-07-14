@@ -13,15 +13,98 @@
     display: inline-block;
   }
 
+  ::placeholder {
+    color: $placeholder;
+    opacity: 1;
+  }
+
   .title {
     text-align: left;
     font-family: $open-sans;
     font-size: 29px;
-    font-style: bold;
+    font-style: 600;
     color: $text-black;
   }
 
-  .personal-info {
+  .password {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
+    mat-icon {
+      position: absolute;
+      color: $placeholder;
+      left: 44%;
+      margin-top: -3px;
+    }
   }
+
+  p {
+    font-family: $mukta;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+  }
+
+  .form-left,
+  .form-right {
+    flex-basis: 49%;
+    padding: 12px 9px;
+  }
+
+  .form-left input:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .form-left input.box-project:not(:first-child) {
+    margin-top: 5px;
+  }
+
+  .form-left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .half-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    input {
+      width: 49%;
+    }
+  }
+
+  .address-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .first-input {
+      width: 29%;
+    }
+
+    .second-input {
+      width: 69%;
+    }
+  }
+
+  .btn-area{
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-register {
+    display: inline-block;
+    width: 371px;
+    height: 48px;
+    border-radius: 40px;
+    box-shadow: 0px 8px 15px rgba(134, 127, 246, 0.7);
+  }
+
 }
