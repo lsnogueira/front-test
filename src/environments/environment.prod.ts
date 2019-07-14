@@ -1,3 +1,7 @@
 export const environment = {
-  production: true
+  production: true,
+  api: {
+    domain: 'processoseletivo.azurewebsites.net',
+    protocol: 'https://'
+  }
 };
