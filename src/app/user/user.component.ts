@@ -5,8 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <app-header></app-header>
     <router-outlet></router-outlet>
-  `,
-  styleUrls: ['../../assets/scss/components/_user.component.scss']
+  `
 })
 export class UserComponent implements OnInit {
   constructor() {}

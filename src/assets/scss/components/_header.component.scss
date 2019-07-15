@@ -1,3 +1,17 @@
+@import '../utils/colors';
+
 .navbar {
   background-color: transparent;
+}
+
+.btn-logout {
+  position: absolute;
+  border-radius: 40px;
+  color: $text-black;
+  font-size: 16px;
+  border: 2px solid $placeholder;
+  background-color: white;
+  width: 124px;
+  height: 36px;
+  right: 15px;
 }

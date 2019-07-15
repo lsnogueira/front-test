@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../../shared/services';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -7,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
-    document.body.classList.add('bg-home');
+    this.changeBackground();
+
+    if (!this.authService.checkSession('user')) {
+      this.router.navigate(['/login']);
+    }
   }
 
+  private changeBackground(): void {
+    if (document.body.classList.contains('bg-user')) {
+      document.body.classList.replace('bg-user', 'bg-home');
+    } else {
+      document.body.classList.add('bg-home');
+    }
+  }
 }

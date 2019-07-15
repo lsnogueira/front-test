@@ -21,7 +21,7 @@ export class AuthService {
     this.cookies.delete(sessionName);
   }
 
-  checkSession(sessionName): boolean {
+  checkSession(sessionName: string): boolean {
     return this.cookies.check(sessionName);
   }
 }
