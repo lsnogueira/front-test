@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SnackbarService } from './services/utils';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +14,8 @@ import { SnackbarService } from './services/utils';
   ],
   imports: [
     CommonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent

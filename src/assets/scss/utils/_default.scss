@@ -4,3 +4,14 @@
     no-repeat
     50% 88vh;
 }
+
+.bg-home {
+  background:
+    url('assets/images/bg-front.svg')
+    no-repeat
+    50% 50%,
+    url('assets/images/bg-front.svg')
+    no-repeat
+    30vw 130vh;
+  background-size: auto, 2000px;
+}

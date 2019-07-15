@@ -12,7 +12,7 @@ import { User } from '../../../shared/models';
 })
 export class RegisterComponent implements OnInit {
   formRegister: FormGroup;
-
+  submitted: boolean;
   constructor(
     private apiService: ApiService,
     private router: Router,
@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
+    this.submitted = false;
   }
 
   createForm(): void {
@@ -45,6 +46,7 @@ export class RegisterComponent implements OnInit {
   }
 
   goRegister(): void {
+    this.submitted = true;
     if (this.formRegister.invalid) {
       return;
     }
@@ -66,12 +68,12 @@ export class RegisterComponent implements OnInit {
     this.apiService
       .registerUser(body)
       .then(res => {
-        console.log('deu bom', res);
         this.router.navigate(['/home']);
       })
       .catch(rej => {
         console.log('deu ruim', rej);
         this.sbService.open('Não foi possível concluir o cadastro');
+        this.submitted = false;
       });
   }
 }
