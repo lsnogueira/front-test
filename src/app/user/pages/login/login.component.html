@@ -24,8 +24,9 @@
                 class="form-control"
                 placeholder="Senha"
                 formControlName="password"
+                id="password"
               />
-              <mat-icon>remove_red_eye</mat-icon>
+              <mat-icon (click)="showPassword()">remove_red_eye</mat-icon>
             </div>
             <!-- /.password -->
             <div class="text-right">

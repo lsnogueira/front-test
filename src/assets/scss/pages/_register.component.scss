@@ -13,6 +13,10 @@
     display: inline-block;
   }
 
+  input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+
   ::placeholder {
     color: $placeholder;
     opacity: 1;
@@ -36,6 +40,7 @@
       color: $placeholder;
       left: 44%;
       margin-top: -3px;
+      cursor: pointer;
     }
   }
 

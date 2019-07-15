@@ -79,4 +79,13 @@ export class LoginComponent implements OnInit, OnDestroy {
       document.body.classList.add('bg-user');
     }
   }
+
+  showPassword() {
+    const inputPassword = document.getElementById('password') as HTMLInputElement;
+    if (inputPassword.type === 'password') {
+      inputPassword.type = 'text';
+    } else {
+      inputPassword.type = 'password';
+    }
+  }
 }
