@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment as env } from '../../../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { User, UserSession } from '../../models';
+import { User, Token, UserCredentials } from '../../models';
 
 const { protocol, domain } = env.api;
 @Injectable({
@@ -23,9 +23,9 @@ export class ApiService {
       .toPromise();
   }
 
-  loginUser(userCredentials: any): Observable<UserSession> {
+  requestToken(userCredentials: UserCredentials): Observable<Token> {
 
-    return this.http.post<UserSession>(
+    return this.http.post<Token>(
       '/api/Authorization/RequestToken',
       userCredentials,
       {
