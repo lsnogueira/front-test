@@ -7,14 +7,24 @@
       </span>
       <!-- /.title mb-3 -->
       <div>
-        <form>
+        <form [formGroup]="formLogin" (ngSubmit)="goLogin()">
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="E-mail" />
+            <input
+              type="email"
+              class="form-control"
+              placeholder="E-mail"
+              formControlName="login"
+            />
           </div>
           <!-- /.form-group -->
           <div class="form-group">
             <div class="password">
-              <input type="password" class="form-control" placeholder="Senha" />
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Senha"
+                formControlName="password"
+              />
               <mat-icon>remove_red_eye</mat-icon>
             </div>
             <!-- /.password -->

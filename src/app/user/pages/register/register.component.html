@@ -6,7 +6,7 @@
       </span>
       <!-- /.title mb-3 -->
       <div>
-        <form>
+        <form [formGroup]="formRegister" (ngSubmit)="goRegister()">
           <div class="form-container mb-4">
             <div class="form-left">
               <p>Informações Pessoais</p>
@@ -14,17 +14,36 @@
                 class="form-control"
                 type="text"
                 placeholder="Nome/Razão Social"
+                formControlName="name"
               />
               <div class="half-fields">
-                <input class="form-control" type="text" placeholder="CPF" />
-                <input class="form-control" type="tel" placeholder="Telefone" />
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="CPF"
+                  formControlName="cpf"
+                  mask="000.000.000-00"
+                />
+                <input
+                  class="form-control"
+                  type="tel"
+                  placeholder="Telefone"
+                  formControlName="tel"
+                  mask="00000-0000"
+                />
               </div>
-              <input class="form-control" type="email" placeholder="E-mail" />
+              <input
+                class="form-control"
+                type="email"
+                placeholder="E-mail"
+                formControlName="email"
+              />
               <div class="password">
                 <input
                   type="password"
                   class="form-control"
                   placeholder="Senha"
+                  formControlName="password"
                 />
                 <mat-icon>remove_red_eye</mat-icon>
               </div>
@@ -38,11 +57,14 @@
                   class="form-control first-input"
                   type="text"
                   placeholder="CEP"
+                  formControlName="cep"
+                  mask="00000-000"
                 />
                 <input
                   class="form-control second-input"
                   type="text"
                   placeholder="Logradouro"
+                  formControlName="addressPlace"
                 />
               </div>
               <div class="address-fields">
@@ -50,11 +72,13 @@
                   class="form-control first-input"
                   type="text"
                   placeholder="Número"
+                  formControlName="addressNumber"
                 />
                 <input
                   class="form-control second-input"
                   type="text"
                   placeholder="Bairro"
+                  formControlName="neighborhood"
                 />
               </div>
             </div>

@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://processoseletivo.azurewebsites.net",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

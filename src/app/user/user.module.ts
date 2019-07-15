@@ -6,9 +6,10 @@ import { UserComponent } from './user.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SharedModule } from '../shared/shared.module';
+import { NgxMaskModule } from 'ngx-mask';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,10 @@ import { MatIconModule } from '@angular/material/icon';
     UserRoutingModule,
     SharedModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot()
   ]
 })
 export class UserModule { }
