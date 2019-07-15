@@ -6,11 +6,13 @@ import { SnackbarService } from '../../../shared/services/utils';
 import { User, UserCredentials } from '../../../shared/models';
 import { ErrorMessages } from '../../../shared/enum';
 import { Subscription } from 'rxjs';
+import { slideStateTrigger } from '../../../shared/animations/animations';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['../../../../assets/scss/pages/_register.component.scss']
+  styleUrls: ['../../../../assets/scss/pages/_register.component.scss'],
+  animations: [slideStateTrigger]
 })
 export class RegisterComponent implements OnInit, OnDestroy {
   formRegister: FormGroup;

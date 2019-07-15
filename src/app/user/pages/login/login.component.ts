@@ -5,11 +5,13 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { UserCredentials } from '../../../shared/models';
 import { ErrorMessages } from '../../../shared/enum';
+import { fadeStateTrigger } from '../../../shared/animations/animations';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['../../../../assets/scss/pages/_login.component.scss']
+  styleUrls: ['../../../../assets/scss/pages/_login.component.scss'],
+  animations: [fadeStateTrigger]
 })
 export class LoginComponent implements OnInit, OnDestroy {
   formLogin: FormGroup;

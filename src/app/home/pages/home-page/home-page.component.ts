@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../shared/services';
 import { Router } from '@angular/router';
+import { slideDownStateTrigger } from '../../../shared/animations/animations';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['../../../../assets/scss/pages/_home-page.component.scss']
+  styleUrls: ['../../../../assets/scss/pages/_home-page.component.scss'],
+  animations: [slideDownStateTrigger]
 })
 export class HomePageComponent implements OnInit {
 
