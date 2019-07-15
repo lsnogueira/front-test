@@ -27,4 +27,4 @@ Após o processo, o console deve printar *Compiled Successfull*.
 
 * [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
 * [Angular Material](https://material.angular.io/) version 8.0.2.
-* [Bootstrap](https://getbootstrap.com/) version 4.3.
+* [Bootstrap](https://getbootstrap.com/) version 4.3

@@ -93,19 +93,20 @@ export class RegisterComponent implements OnInit, OnDestroy {
     };
 
     this.subscription.add(
-      this.apiService.requestToken(body).subscribe(
-        res => {
-          this.authService.saveSession(res);
-          this.router.navigate(['/home']);
-        },
-        rej => {
-          this.submitted = false;
-          if (rej.status === 400) {
-            this.sbService.open(ErrorMessages.LOGIN_NOT_FOUND_ERROR);
-          } else {
-            this.sbService.open(ErrorMessages.UNEXPECTED_ERROR);
+      this.apiService.requestToken(body)
+        .subscribe(
+          res => {
+            this.authService.saveSession(res);
+            this.router.navigate(['/home']);
+          },
+          rej => {
+            this.submitted = false;
+            if (rej.status === 400) {
+              this.sbService.open(ErrorMessages.LOGIN_NOT_FOUND_ERROR);
+            } else {
+              this.sbService.open(ErrorMessages.UNEXPECTED_ERROR);
+            }
           }
-        }
       )
     );
   }
